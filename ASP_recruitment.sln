@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP_recruitment", "ASP_recruitment\ASP_recruitment.csproj", "{597B198D-B5B8-4DF2-AB66-361368404EBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{597B198D-B5B8-4DF2-AB66-361368404EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{597B198D-B5B8-4DF2-AB66-361368404EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{597B198D-B5B8-4DF2-AB66-361368404EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{597B198D-B5B8-4DF2-AB66-361368404EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {904DB5F7-09A6-4541-87F4-1B3FD77C27D1}
+	EndGlobalSection
+EndGlobal
