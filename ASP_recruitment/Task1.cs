@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace ASP_recruitment
@@ -18,14 +17,14 @@ namespace ASP_recruitment
 		public static string ConvertToHexadecimal(int r, int g, int b)
 		{
 			var strBuilder = new StringBuilder();
-			strBuilder.Append(ConvertIntToHex(r));
-			strBuilder.Append(ConvertIntToHex(g));
-			strBuilder.Append(ConvertIntToHex(b));
+			strBuilder.Append(IntToHexadecimal(r));
+			strBuilder.Append(IntToHexadecimal(g));
+			strBuilder.Append(IntToHexadecimal(b));
 			strBuilder.Insert(0, "#");
 			return strBuilder.ToString();
 		}
 
-		private static string ConvertIntToHex(int value)
+		private static string IntToHexadecimal(int value)
 		{
 			const int devider = 16;
 			var strBuilder = new StringBuilder();
