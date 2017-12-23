@@ -44,9 +44,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task1.cs" />
-    <Compile Include="Task2.cs" />
-    <Compile Include="Task3.cs" />
+    <Compile Include="IntToHexConverter.cs" />
+    <Compile Include="SortingAlgorithm.cs" />
+    <Compile Include="CarRefuelingCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
