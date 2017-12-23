@@ -5,6 +5,7 @@ namespace ASP_recruitment
 {
 	public class SortingAlgorithm
 	{
+		// Task # 2
 		public static string SortStrByDigits(string stringInput)
 		{
 			var stringDict = new Dictionary<int, string>();

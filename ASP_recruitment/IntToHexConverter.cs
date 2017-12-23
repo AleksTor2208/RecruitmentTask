@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ASP_recruitment
 {
+	// Task # 1
 	public class IntToHexConverter
 	{
 		static readonly Dictionary<string, string> HexValues = new Dictionary<string, string>
