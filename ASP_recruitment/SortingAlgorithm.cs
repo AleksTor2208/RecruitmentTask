@@ -3,7 +3,7 @@ using System.Text;
 
 namespace ASP_recruitment
 {
-	public class Task2
+	public class SortingAlgorithm
 	{
 		public static string SortElements(string stringInput)
 		{
