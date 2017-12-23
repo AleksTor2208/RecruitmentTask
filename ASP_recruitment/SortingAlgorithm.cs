@@ -5,25 +5,22 @@ namespace ASP_recruitment
 {
 	public class SortingAlgorithm
 	{
-		public static string SortElements(string stringInput)
+		public static string SortStrByDigits(string stringInput)
 		{
+			var stringDict = new Dictionary<int, string>();
 			var inputArray = stringInput.Split(' ');
-			var outputList = new List<string>();
-			var maxValue = int.MaxValue;
 			for (int i = 0; i < inputArray.Length; i++)
 			{
-				var digitValue = GetDigitValue(inputArray[i]);
-				if (digitValue < maxValue)
-				{
-					maxValue = digitValue;
-					outputList.Insert(0, inputArray[i]);
-				}
-				else
-				{
-					outputList.Add(inputArray[i]);
-				}						
+				stringDict.Add(GetDigitValue(inputArray[i]), inputArray[i]);
 			}
-			return string.Join(" ", outputList.ToArray());
+			var stringDictKeys = new List<int>(stringDict.Keys);
+			stringDictKeys.Sort();
+			var outputArray = new string[stringDictKeys.Count];
+			for (int i = 0; i < outputArray.Length; i++)
+			{
+				outputArray[i] = stringDict[stringDictKeys[i]];
+			}
+			return string.Join(" ", outputArray);
 		}
 
 		private static int GetDigitValue(string word)
