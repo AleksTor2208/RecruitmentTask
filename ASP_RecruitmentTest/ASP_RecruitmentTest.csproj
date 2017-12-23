@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarRefuelingCalculatorTest.cs" />
     <Compile Include="IntToHexConverterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortingAlgorithmTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ASP_recruitment\ASP_recruitment.csproj">
