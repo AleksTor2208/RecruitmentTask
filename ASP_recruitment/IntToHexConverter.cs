@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace ASP_recruitment
@@ -40,14 +41,24 @@ namespace ASP_recruitment
 			var temp = strBuilder.ToString();
 			for (int i = 0; i < temp.Length; i++)
 			{
-				if (i > temp.Length - 2) break;
+				if (i+1 >= temp.Length) break;
 		
 				if (HexDecimalKeys.Contains(temp.Substring(i, 2)))
 				{
-					temp = HexValues[temp.Substring(i, 2)] + temp.Substring(i + 2, temp.Length-2);
+					temp = ChangeNotation(temp, i);
 				}
 			}
 			return temp;
-		}		
+		}
+
+		private static string ChangeNotation(string temp, int index)
+		{
+			var tempArray = temp.ToCharArray();
+			var tempList = new List<char>(tempArray);
+			tempList.RemoveAt(index);
+			tempList.RemoveAt(index);
+			tempList.Insert(index, char.Parse(HexValues[temp.Substring(index, 2)]));
+			return String.Join("", tempList.ToArray());
+		}
 	}
 }
