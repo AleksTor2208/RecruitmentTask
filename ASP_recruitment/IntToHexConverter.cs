@@ -3,15 +3,12 @@ using System.Text;
 
 namespace ASP_recruitment
 {
-	public class Task1
+	public class IntToHexConverter
 	{
 		static readonly Dictionary<string, string> HexValues = new Dictionary<string, string>
 		{
-			{ "10", "A" },
-			{ "11", "B" },
-			{ "12", "C" },
-			{ "13", "D" },
-			{ "14", "E" }
+			{ "10", "A" }, { "11", "B" }, { "12", "C" },
+			{ "13", "D" }, { "14", "E" }, { "15", "F" }
 		};
 
 		public static string ConvertToHexadecimal(int r, int g, int b)
@@ -35,7 +32,6 @@ namespace ASP_recruitment
 				value /= devider;
 			}
 			return AddLetters(strBuilder);		
-			
 		}
 
 		private static string AddLetters(StringBuilder strBuilder)
