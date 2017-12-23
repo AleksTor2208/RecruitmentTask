@@ -12,7 +12,7 @@ namespace ASP_recruitment
         {
 			int[] cars = { 1, 4, 7, 2, 10, 15, 8 };
 			var pumps = 6;
-			var task1 = CarRefuelingCalculator.TimeCount(cars, pumps);	
+			var task1 = CarRefuelingTimeCalculator.TimeCount(cars, pumps);	
 			var task2 = SortingAlgorithm.SortStrByDigits("wyraz124 wyraz335 wy0raz 654wyraz 2wyrazy");
 			var task3 = IntToHexConverter.ConvertToHexadecimal(125, 125, 125);
 			Console.WriteLine(task1);

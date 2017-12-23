@@ -2,9 +2,10 @@
 
 namespace ASP_recruitment
 {
-    public class CarRefuelingCalculator
+    public class CarRefuelingTimeCalculator
     {
-        public static string TimeCount(int[] cars, int pumps)
+		// Task # 3
+		public static string TimeCount(int[] cars, int pumps)
         {
             if (cars.Length == 0) return "0";
             var carsOnRefuiling = new int[pumps];
@@ -14,24 +15,24 @@ namespace ASP_recruitment
             while (currCarIndex >= 0)
             {
                 SetCarsOnRefuiling(cars, carsOnRefuiling, ref currCarIndex);
-                var minTime = GetMinRefTime(carsOnRefuiling);
-                if (OnePumpIsEmpty(carsOnRefuiling))
+                var shortestTime = GetMinimalTime(carsOnRefuiling);
+                if (IsEmptyPump(carsOnRefuiling))
                 {
                     var maxTimeLeft = GetMaxTime(carsOnRefuiling);
                     resultTime += maxTimeLeft;
                     break;
                 }
-                var minTimePointer = Array.IndexOf(carsOnRefuiling, minTime);
+                var minTimePointer = Array.IndexOf(carsOnRefuiling, shortestTime);
                 var firstCarLeft = carsOnRefuiling[minTimePointer];
                 resultTime += firstCarLeft;
-                SubtractPassedTime(carsOnRefuiling, firstCarLeft);
+                SubtractTime(carsOnRefuiling, firstCarLeft);
             }
             return resultTime.ToString();
         }
 
         private static int GetMaxTime(int[] cars)
         {
-            var maxTime = 0;
+            var maxTime = int.MinValue;
             foreach (var timeOnRef in cars)
             {
                 if (timeOnRef > maxTime)
@@ -42,7 +43,7 @@ namespace ASP_recruitment
             return maxTime;
         }
 
-        private static bool OnePumpIsEmpty(int[] cars)
+        private static bool IsEmptyPump(int[] cars)
         {
             foreach (var car in cars)
             {
@@ -65,7 +66,7 @@ namespace ASP_recruitment
             }
         }
 
-        private static void SubtractPassedTime(int[] cars, int timePassed)
+        private static void SubtractTime(int[] cars, int timePassed)
         {
             for (int i = 0; i < cars.Length; i++)
             {
@@ -73,9 +74,9 @@ namespace ASP_recruitment
             }
         }
 
-        private static int GetMinRefTime(int[] cars)
+        private static int GetMinimalTime(int[] cars)
         {
-            var minTime = 999;
+            var minTime = int.MaxValue;
             for (int index = 0; index < cars.Length; index++)
             {
                 if (cars[index] < minTime)                

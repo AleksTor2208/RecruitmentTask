@@ -16,7 +16,7 @@ namespace ASP_RecruitmentTest
 			var expected = "25";
 
 			// Act
-			var actual = CarRefuelingCalculator.TimeCount(cars, pumps);
+			var actual = CarRefuelingTimeCalculator.TimeCount(cars, pumps);
 
 			//Assert
 			Assert.AreEqual(expected, actual);
@@ -30,7 +30,7 @@ namespace ASP_RecruitmentTest
 			var expected = "17";
 
 			// Act
-			var actual = CarRefuelingCalculator.TimeCount(cars, pumps);
+			var actual = CarRefuelingTimeCalculator.TimeCount(cars, pumps);
 
 			//Assert
 			Assert.AreEqual(expected, actual);
@@ -44,7 +44,7 @@ namespace ASP_RecruitmentTest
 			var expected = "15";
 
 			// Act
-			var actual = CarRefuelingCalculator.TimeCount(cars, pumps);
+			var actual = CarRefuelingTimeCalculator.TimeCount(cars, pumps);
 
 			//Assert
 			Assert.AreEqual(expected, actual);
@@ -58,7 +58,7 @@ namespace ASP_RecruitmentTest
 			var expected = "15";
 
 			// Act
-			var actual = CarRefuelingCalculator.TimeCount(cars, pumps);
+			var actual = CarRefuelingTimeCalculator.TimeCount(cars, pumps);
 
 			//Assert
 			Assert.AreEqual(expected, actual);
