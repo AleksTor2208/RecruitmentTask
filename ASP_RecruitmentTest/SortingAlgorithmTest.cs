@@ -14,7 +14,7 @@ namespace ASP_RecruitmentTest
 			var expected = "wyraz3 wyraz12 wy21raz";
 
 			// Act
-			var actual = SortingAlgorithm.SortElements(unsortedVal);
+			var actual = SortingAlgorithm.SortStrByDigits(unsortedVal);
 			
 			//Assert
 			Assert.AreEqual(expected, actual);
@@ -28,7 +28,7 @@ namespace ASP_RecruitmentTest
 			var expected = "wy0raz 2wyrazy wyraz124 wyraz335 654wyraz";
 
 			// Act
-			var actual = SortingAlgorithm.SortElements(unsortedVal);
+			var actual = SortingAlgorithm.SortStrByDigits(unsortedVal);
 
 			//Assert
 			Assert.AreEqual(expected, actual);
