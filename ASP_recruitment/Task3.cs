@@ -9,8 +9,7 @@ namespace ASP_recruitment
             if (cars.Length == 0) return "0";
             var carsOnRefuiling = new int[pumps];
             var resultTime = 0;
-            var currentCar= cars.Length - 1;            
-           
+            var currentCar= cars.Length - 1;          
 
             while (currentCar >= 0)
             {
@@ -26,11 +25,8 @@ namespace ASP_recruitment
                 var firstCarLeft = carsOnRefuiling[minTimePointer];
                 resultTime += firstCarLeft;
                 SubtractPassedTime(carsOnRefuiling, firstCarLeft);
-                              
             }
-
             return resultTime.ToString();
-
         }
 
         private static int GetMaxTime(int[] cars)
