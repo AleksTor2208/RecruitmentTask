@@ -37,5 +37,21 @@ namespace ASP_RecruitmentTest
 			//Assert
 			Assert.AreEqual(expected, actual);
 		}
+
+		[Test]
+		public void ConvertToHexadecimal_ReturnCorrectValueWhenMiddleValuesPassed()
+		{
+			//Arrange
+			var R = 125;
+			var G = 125;
+			var B = 125;
+			var expected = "#7D7D7D";
+
+			// Act
+			var actual = IntToHexConverter.ConvertToHexadecimal(R, G, B);
+
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
 	}
 }
