@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace ASP_recruitment
 {
-	internal class Task2
+	public class Task2
 	{
 		public static string SortElements(string stringInput)
 		{
