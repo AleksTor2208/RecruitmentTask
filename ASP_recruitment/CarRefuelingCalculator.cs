@@ -2,18 +2,18 @@
 
 namespace ASP_recruitment
 {
-    class Task3
+    public class CarRefuelingCalculator
     {
         public static string TimeCount(int[] cars, int pumps)
         {
             if (cars.Length == 0) return "0";
             var carsOnRefuiling = new int[pumps];
             var resultTime = 0;
-            var currentCar= cars.Length - 1;          
+            var currCarIndex= cars.Length - 1;          
 
-            while (currentCar >= 0)
+            while (currCarIndex >= 0)
             {
-                SetCarsOnRefuiling(cars, carsOnRefuiling, ref currentCar);
+                SetCarsOnRefuiling(cars, carsOnRefuiling, ref currCarIndex);
                 var minTime = GetMinRefTime(carsOnRefuiling);
                 if (OnePumpIsEmpty(carsOnRefuiling))
                 {
