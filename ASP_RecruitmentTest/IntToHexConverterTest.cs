@@ -20,7 +20,7 @@ namespace ASP_RecruitmentTest
 
 			//Assert
 			Assert.AreEqual(expected, actual);
-		}
+			}
 
 		[Test]
 		public void ConvertToHexadecimal_ReturnCorrectValueWhenMaxValuesPassed()
